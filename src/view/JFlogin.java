@@ -4,6 +4,9 @@
  */
 package view;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author ESCOLA
@@ -34,10 +37,10 @@ public class JFlogin extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        jPasswordFieldSenha = new javax.swing.JPasswordField();
+        jButtonEntrar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextFieldUsuario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
 
@@ -67,7 +70,7 @@ public class JFlogin extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Source Serif Pro Black", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("BEM VINDO");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 300));
 
@@ -77,32 +80,32 @@ public class JFlogin extends javax.swing.JFrame {
         jLabel7.setText("LOGIN");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, 40));
 
-        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+        jPasswordFieldSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jPasswordField1ActionPerformed(evt);
+                jPasswordFieldSenhaActionPerformed(evt);
             }
         });
-        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 190, 30));
+        jPanel2.add(jPasswordFieldSenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 190, 30));
 
-        jButton1.setFont(new java.awt.Font("Segoe UI Variable", 0, 18)); // NOI18N
-        jButton1.setText("cadastrar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonEntrar.setFont(new java.awt.Font("Segoe UI Variable", 0, 18)); // NOI18N
+        jButtonEntrar.setText("cadastrar");
+        jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonEntrarActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 110, -1));
+        jPanel2.add(jButtonEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 110, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Variable", 1, 14)); // NOI18N
         jLabel4.setText("senha");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 80, 20));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        jTextFieldUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                jTextFieldUsuarioActionPerformed(evt);
             }
         });
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 190, 30));
+        jPanel2.add(jTextFieldUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 190, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI Variable", 1, 14)); // NOI18N
         jLabel3.setText("usuario");
@@ -117,21 +120,37 @@ public class JFlogin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        String usuario = jTextFieldUsuario.getText();
+        String senha = jPasswordFieldSenha.getText();  
+        
+        if(usuario.equals("portela") &&
+                senha.equals("12345")){
+            Main main = new Main();
+            main.setExtendedState(JFrame.MAXIMIZED_BOTH);
+            main.setVisible(true);
+           
+        }else{
+            JOptionPane.showMessageDialog
+                    (null, "Login ou senha inválidos!");
+            
+        }
+           
+        
+    }//GEN-LAST:event_jButtonEntrarActionPerformed
 
     private void jPanel1AncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jPanel1AncestorAdded
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1AncestorAdded
 
-    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+    private void jPasswordFieldSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordFieldSenhaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jPasswordField1ActionPerformed
+    }//GEN-LAST:event_jPasswordFieldSenhaActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void jTextFieldUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldUsuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_jTextFieldUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,7 +189,7 @@ public class JFlogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonEntrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -182,7 +201,7 @@ public class JFlogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JPasswordField jPasswordFieldSenha;
+    private javax.swing.JTextField jTextFieldUsuario;
     // End of variables declaration//GEN-END:variables
 }
