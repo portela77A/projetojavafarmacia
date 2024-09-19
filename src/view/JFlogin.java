@@ -42,7 +42,7 @@ public class JFlogin extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jTextFieldUsuario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
 
         jLabel6.setText("jLabel6");
 
@@ -80,6 +80,7 @@ public class JFlogin extends javax.swing.JFrame {
         jLabel7.setText("LOGIN");
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, 40));
 
+        jPasswordFieldSenha.setText("12345");
         jPasswordFieldSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordFieldSenhaActionPerformed(evt);
@@ -100,6 +101,7 @@ public class JFlogin extends javax.swing.JFrame {
         jLabel4.setText("senha");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 80, 20));
 
+        jTextFieldUsuario.setText("portela");
         jTextFieldUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldUsuarioActionPerformed(evt);
@@ -111,8 +113,8 @@ public class JFlogin extends javax.swing.JFrame {
         jLabel3.setText("usuario");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 50, 40));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/login_1.png"))); // NOI18N
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 50, -1));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-login-arredondado-à-direita-50 (1).png"))); // NOI18N
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 240, 300));
 
@@ -189,6 +191,7 @@ public class JFlogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonEntrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -198,7 +201,6 @@ public class JFlogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField jPasswordFieldSenha;
